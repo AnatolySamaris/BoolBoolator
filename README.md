@@ -1,5 +1,5 @@
 ## You can install the BoolBoolator if you download the BoolBoolatorSetup.exe file
-## You have to install the Python interpreter to open the downloaded file...
+### You have to install the Python interpreter to open the downloaded file...
 
 This is a logical calculator (yeah, it's called BoolBoolator because it solves boolean functions :D )
 
