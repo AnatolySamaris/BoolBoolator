@@ -1,7 +1,6 @@
 import sys
 from pyperclip import copy
 
-from PyQt5 import uic
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt, QRect
 
@@ -24,7 +23,6 @@ def delete_spaces(expression):
 class Input(QtWidgets.QMainWindow):
     def __init__(self):
         super(Input, self).__init__()
-        uic.loadUi('input.ui', self)
         self.ui = InputWindow()
         self.ui.setupUi(self)
         self.Expression = self.ui.Expression
@@ -119,7 +117,6 @@ class Input(QtWidgets.QMainWindow):
 class Result(QtWidgets.QMainWindow):
     def __init__(self, exp: BoolExp):
         super(Result, self).__init__()
-        uic.loadUi('table.ui', self)
         self.ui = ResultWindow()
         self.ui.setupUi(self)
         self.ui.OriginalExp.append(exp.expression)
@@ -129,11 +126,7 @@ class Result(QtWidgets.QMainWindow):
         self.ui.Zhegalkin.append(self.exp.get_zhegalkin(self.result, pretty=True))
         self.ui.PDNF.append(self.exp.get_pnf(self.result, pnf_mode='pdnf', pretty=True))
         self.ui.PCNF.append(self.exp.get_pnf(self.result, pnf_mode='pcnf', pretty=True))
-        self.classes = ' '.join(self.exp.get_classes(self.result))
-        if len(self.classes) == 0:
-            self.ui.Classes.append("No one.")
-        else:
-            self.ui.Classes.append(self.classes)
+        self.ui.Classes.append(' '.join(self.exp.get_classes(self.result)))
 
         self.ui.CopyZhegalkin.clicked.connect(self.copy_zhegalkin)
         self.ui.CopyPDNF.clicked.connect(self.copy_pdnf)
@@ -156,11 +149,10 @@ class Result(QtWidgets.QMainWindow):
 class Table(QtWidgets.QMainWindow):
     def __init__(self, exp: BoolExp):
         super(Table, self).__init__()
-        uic.loadUi('table.ui', self)
         self.ui = TableWindow()
         self.ui.setupUi(self)
         self.result = exp.calculate()
-        self.column_names = exp.variables + [f'f({",".join(exp.variables)})']
+        self.column_names = exp.variables + ['f(...)']
 
         self.ui.BoolTable.horizontalHeader()
 
