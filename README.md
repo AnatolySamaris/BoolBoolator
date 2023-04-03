@@ -1,3 +1,5 @@
+## You can install BoolBoolator. Look for an .exe file in releases.
+
 This is a logical calculator (yeah, it's called BoolBoolator because it solves boolean functions :D )
 
 It's my first project that's something about serious, so it needs to be improved in some things (if you test it, you'll see them)
