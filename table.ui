@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BoolBoolator - Table</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget {
+	color: white;
+	background-color: #121212;
+	font-family: Rubik;
+	font-size: 10pt;
+	font-weight: 600;
+}
+
+QPushButton {
+	background-color: transparent;
+	border: 1px solid #49423d;
+}
+
+QPushButton:hover {
+	background-color: #666;
+}
+
+QPushButton:!hover {
+	background-color: transparent;
+}
+
+QPushButton:pressed {
+	background-color: #24b3a7;
+}</string>
+   </property>
+   <widget class="QTableWidget" name="BoolTable">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>460</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QHeaderView::section {
+    background-color: #121212;
+    color: white;
+	font-family: Rubik;
+    font-size: 16pt;
+    font-weight: 600
+}</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
