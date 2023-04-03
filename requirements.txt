@@ -1,0 +1,6 @@
+pyperclip==1.8.2
+PyQt5==5.15.9
+PyQt5-Qt5==5.15.2
+PyQt5-sip==12.11.1
+PyQt6-Qt6==6.4.3
+PyQt6-sip==13.4.1
